@@ -1,0 +1,13 @@
+{
+  "name": "portoflio",
+  "version": "1.0.0",
+  "author": "Mathieu <mathieuoliveirapereira@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  }
+}
