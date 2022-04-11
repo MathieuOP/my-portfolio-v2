@@ -24,7 +24,7 @@ const app = {
       
       app.isOpenCategory = true;
 
-      // document.title = `Portfolio - ${app.currentCategory.textContent}`;
+      document.title = `Portfolio - ${app.currentCategory.dataset.title}`;
       app.categoryCloned = app.currentCategory.cloneNode(false);
       
       app.categoryCloned.style.position = "static";
@@ -65,6 +65,7 @@ const app = {
       const { top, left, width, height } = app.categoryCloned.getBoundingClientRect();
       const category = app.currentCategory.dataset.category;
 
+      document.title = "Portfolio - Accueil";
       app.currentCategory.style.top = `${top}px`;
       app.currentCategory.style.left = `${left}px`;
       app.currentCategory.style.width = `${width}px`;
@@ -81,7 +82,6 @@ const app = {
         app.currentCategory.style.cursor = 'pointer';
 
         app.categoryCloned.remove();
-        document.title = "Portfolio - Accueil";
         app.isOpenCategory = false;
         app.categoryCloned = null;
         app.currentCategory = null;
