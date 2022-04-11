@@ -159,6 +159,7 @@ body {
 
 /* BUTTON */
 .button {
+  text-decoration: none;
   background-color: transparent;
   border: 3px solid orange;
   padding: 10px 15px;
@@ -169,6 +170,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  font-family: sans-serif;
 
   &:hover {
     color: #111;
