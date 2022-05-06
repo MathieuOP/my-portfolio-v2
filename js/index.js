@@ -14,6 +14,11 @@ const app = {
     });
 
     app.closeElement.addEventListener('click', app.handleCloseCategory);
+ 
+    window.addEventListener('resize', () => {
+      const doc = document.documentElement;
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+    });
   },
   handleCategory: function(e) {
     app.currentCategory = e.currentTarget;
