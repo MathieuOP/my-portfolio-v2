@@ -122,6 +122,10 @@ body {
     justify-content: center;
     flex-direction: column;
   }
+
+  .content p span {
+    border-bottom: 2px solid #fff;
+  }
 }
 
 .skills--isActived {
