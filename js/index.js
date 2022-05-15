@@ -15,6 +15,7 @@ const app = {
       about: '#181818',
       skills: '#1b1b1b',
       xp: '#1e1e1e',
+      'skills-card': '#1e1e1e',
       'xp-card': 'rgb(33, 33, 33)',
     },
     secondary: {
@@ -22,7 +23,8 @@ const app = {
       secondary: 'orange',
       about: 'rgb(29, 11, 68)',
       skills: 'rgb(32, 14, 71)',
-      xp: ' rgb(35, 17, 74)',
+      xp: 'rgb(35, 17, 74)',
+      'skills-card': 'rgb(35, 17, 74)',
       'xp-card': 'rgb(38, 20, 77)',
     },
   },
@@ -125,6 +127,7 @@ const app = {
     root.style.setProperty('--about', app.themes[theme].about);
     root.style.setProperty('--skills', app.themes[theme].skills);
     root.style.setProperty('--xp', app.themes[theme].xp);
+    root.style.setProperty('--skills-card', app.themes[theme]['xp-card']);
     root.style.setProperty('--xp-card', app.themes[theme]['xp-card']);
   },
 };
