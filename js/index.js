@@ -8,6 +8,24 @@ const app = {
   currentCategory: null,
   bodyElement: document.querySelector('body'),
   closeElement: document.querySelector('.close'),
+  themes: {
+    primary: {
+      primary: '#111',
+      secondary: 'orange',
+      about: '#181818',
+      skills: '#1b1b1b',
+      xp: '#1e1e1e',
+      'xp-card': 'rgb(33, 33, 33)',
+    },
+    secondary: {
+      primary: 'rgb(26, 8, 65)', 
+      secondary: 'orange',
+      about: 'rgb(29, 11, 68)',
+      skills: 'rgb(32, 14, 71)',
+      xp: ' rgb(35, 17, 74)',
+      'xp-card': 'rgb(38, 20, 77)',
+    },
+  },
   init: () => {
     app.categories.forEach(category => {
       category.addEventListener('click', app.handleCategory);
@@ -19,6 +37,11 @@ const app = {
       const doc = document.documentElement;
       doc.style.setProperty('--app-height', `${window.innerHeight}px`);
     });
+
+    document.querySelectorAll('.themes > div').forEach(theme => {
+      theme.addEventListener('click', app.handleClickThemes);
+    });
+
   },
   handleCategory: function(e) {
     app.currentCategory = e.currentTarget;
@@ -92,7 +115,18 @@ const app = {
         app.currentCategory = null;
       }, 300);
     }
-  }
+  },
+  handleClickThemes: (e) => {
+    const theme = e.currentTarget.dataset.theme;
+    const root = document.documentElement;
+
+    root.style.setProperty('--primary', app.themes[theme].primary);
+    root.style.setProperty('--secondary', app.themes[theme].secondary);
+    root.style.setProperty('--about', app.themes[theme].about);
+    root.style.setProperty('--skills', app.themes[theme].skills);
+    root.style.setProperty('--xp', app.themes[theme].xp);
+    root.style.setProperty('--xp-card', app.themes[theme]['xp-card']);
+  },
 };
 
 document.addEventListener('DOMContentLoaded', app.init);
