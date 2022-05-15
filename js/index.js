@@ -127,7 +127,7 @@ const app = {
     root.style.setProperty('--about', app.themes[theme].about);
     root.style.setProperty('--skills', app.themes[theme].skills);
     root.style.setProperty('--xp', app.themes[theme].xp);
-    root.style.setProperty('--skills-card', app.themes[theme]['xp-card']);
+    root.style.setProperty('--skills-card', app.themes[theme]['skills-card']);
     root.style.setProperty('--xp-card', app.themes[theme]['xp-card']);
   },
 };
