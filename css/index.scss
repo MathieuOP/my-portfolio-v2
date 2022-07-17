@@ -18,7 +18,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 0; 
+  width: 0;
   background: transparent;
 }
 
@@ -317,9 +317,9 @@ body {
 }
 
 .themes-container {
+  display: none;
   background-color: var(--white);
   color: var(--primary);
-  display: flex;
   align-items: center;
   position: fixed;
   top: 45%;
@@ -328,11 +328,11 @@ body {
   transition: 1s;
   padding: 0 10px;
 
-
-  .primary, .secondary {
+  .primary,
+  .secondary {
     cursor: pointer;
   }
-  
+
   .title {
     margin: 0;
     writing-mode: vertical-rl;
@@ -341,7 +341,6 @@ body {
     font-size: 2.2em;
     padding-left: 20px;
   }
-  
 
   .themes .colors {
     display: flex;
@@ -361,7 +360,7 @@ body {
   }
 
   .themes .primary .colors li:first-child {
-    background-color: #111;;
+    background-color: #111;
   }
 
   .themes .primary .colors li:nth-child(2) {
@@ -397,7 +396,7 @@ body {
   }
 
   .themes .secondary .colors li:nth-child(4) {
-    background-color:  rgb(35, 17, 74);
+    background-color: rgb(35, 17, 74);
   }
 
   .themes .secondary .colors li:nth-child(5) {
@@ -559,6 +558,10 @@ body {
         padding: 30px 0;
       }
     }
+  }
+
+  .themes-container {
+    display: flex;
   }
 }
 
